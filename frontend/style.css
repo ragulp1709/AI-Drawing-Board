@@ -1,0 +1,94 @@
+/* style.css — Custom styles for the AI Drawing Board */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    sans-serif;
+}
+
+/* ── Video stream ────────────────────────────────────────────────────────── */
+
+.stream-img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Gesture guide rows ──────────────────────────────────────────────────── */
+
+.gesture-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.gesture-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+}
+
+.gesture-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #f3f4f6;
+}
+
+.gesture-desc {
+  font-size: 0.7rem;
+  color: #6b7280;
+  margin-top: 0.1rem;
+}
+
+/* ── Keyboard shortcut badges ────────────────────────────────────────────── */
+
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  padding: 0.1rem 0.35rem;
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #d1d5db;
+}
+
+/* ── Save button ─────────────────────────────────────────────────────────── */
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #3b82f6;
+}
+
+.save-btn:active {
+  background-color: #1d4ed8;
+}
