@@ -31,19 +31,6 @@ https://your-ai-drawing-board.vercel.app
 
 ![AI Drawing Board](screenshots/ai-drawing-board.png)
 
-## Project Structure
-
-```text
-AI-Drawing-Board/
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-├── screenshots/
-│   └── ai-drawing-board.png
-└── README.md
-```
-
 
 ## Project Objectives
 
