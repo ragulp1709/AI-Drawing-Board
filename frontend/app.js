@@ -6,7 +6,11 @@ const STATE_IDLE    = "IDLE";
 const STATE_DRAWING = "DRAWING";
 const STATE_ERASING = "ERASING";
 
-const API_BASE_URL = "https://ai-drawing-board-1.onrender.com";
+const DEFAULT_API_BASE_URL = "https://ai-drawing-board-1.onrender.com";
+const API_BASE_URL =
+  window.AI_DRAWING_BOARD_API_URL ||
+  document.body.dataset.apiBaseUrl ||
+  DEFAULT_API_BASE_URL;
 
 const POLL_INTERVAL_MS = 500;
 const MIN_BRUSH_SIZE   = 3;
@@ -31,6 +35,10 @@ const colorSwatchEl    = document.getElementById("colorSwatch");
 const colorLabelEl     = document.getElementById("colorLabel");
 const brushSizeLabelEl = document.getElementById("brushSizeLabel");
 const brushBarEl       = document.getElementById("brushBar");
+const saveBtnEl        = document.getElementById("saveBtn");
+
+videoStreamEl.src = `${API_BASE_URL}/stream`;
+saveBtnEl.href = `${API_BASE_URL}/api/snapshot`;
 
 // ── Stream Load Detection ──────────────────────────────────────────────────
 

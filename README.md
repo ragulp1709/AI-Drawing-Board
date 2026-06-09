@@ -4,9 +4,13 @@ An interactive AI-powered Drawing Board that allows users to create sketches and
 
 ## Live Demo
 
-Add your deployment link here:
+Backend stream/API:
 
-https://your-ai-drawing-board.vercel.app
+https://ai-drawing-board-1.onrender.com
+
+Frontend deployment target:
+
+`https://your-project-name.vercel.app`
 
 ## Features
 
@@ -26,6 +30,20 @@ https://your-ai-drawing-board.vercel.app
 - JavaScript
 - Canvas API
 - AI/ML Integration (if applicable)
+- FastAPI
+- OpenCV
+- MediaPipe
+
+## Deployment Notes
+
+This project is split into:
+
+- `frontend/`: static UI, suitable for Vercel
+- `backend/`: Python webcam processing server, suitable for Render or another long-running server host
+
+Vercel should host only the frontend for this repo. The frontend is already configured to use the Render backend at:
+
+`https://ai-drawing-board-1.onrender.com`
 
 ## Preview
 

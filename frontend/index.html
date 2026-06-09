@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Drawing Board</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
-<body class="bg-gray-950 text-white min-h-screen flex flex-col">
+<body
+  class="bg-gray-950 text-white min-h-screen flex flex-col"
+  data-api-base-url="https://ai-drawing-board-1.onrender.com"
+>
 
   <!-- Header -->
   <header class="bg-gray-900 border-b border-gray-800 px-6 py-3 flex items-center gap-3 shrink-0">
@@ -31,7 +34,7 @@
     <!-- Video Stream -->
     <section class="flex-1 bg-black flex items-center justify-center relative overflow-hidden">
       <img id="videoStream"
-           src="/stream"
+           src=""
            alt="Camera stream"
            class="stream-img" />
 
@@ -145,7 +148,7 @@
       <!-- Save Button (pinned to bottom) -->
       <div class="mt-auto">
         <a id="saveBtn"
-           href="/api/snapshot"
+           href="#"
            download="drawing.jpg"
            class="save-btn">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,6 +162,6 @@
     </aside>
   </main>
 
-  <script src="/static/app.js"></script>
+  <script src="/app.js"></script>
 </body>
 </html>
