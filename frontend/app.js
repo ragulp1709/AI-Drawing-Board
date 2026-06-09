@@ -6,6 +6,8 @@ const STATE_IDLE    = "IDLE";
 const STATE_DRAWING = "DRAWING";
 const STATE_ERASING = "ERASING";
 
+const API_BASE_URL = "https://ai-drawing-board-1.onrender.com";
+
 const POLL_INTERVAL_MS = 500;
 const MIN_BRUSH_SIZE   = 3;
 const MAX_BRUSH_SIZE   = 40;
@@ -99,7 +101,7 @@ function updatePanel(data) {
 
 async function pollState() {
   try {
-    const res = await fetch("/api/state");
+    const res = await fetch(`${API_BASE_URL}/api/state`);
     if (res.ok) {
       const data = await res.json();
       updatePanel(data);
